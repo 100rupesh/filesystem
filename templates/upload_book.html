@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container'></br></br>
+    <div class="jumbotron">
+<h1>BOOKS UPLOAD</h1></br>
+<table>
+<form method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{form.as_table}}
+</table>
+    <button type='submit' class='btn btn-primary'>UPLOAD BOOK</button>
+</form>
+</div>
+</div>
+
+{% endblock %}

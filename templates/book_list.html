@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}</br></br>
+<div class='container'>
+<div class='jumbotron'>
+<h1>BOOKS</h1>
+<div class='container'>
+    
+<table class='table' border=1px solid >
+<thead>
+    <tr>
+        <th><center>Title</center></th>
+        <th><center>Author</center></th>
+        <th><center>Download</center></th>
+    </tr>
+</thead>
+<tbody>
+    {% for i in text %}
+    <tr>
+        <td><center>{{i.title}}</center></td>
+        <td><center>{{i.author}}</center></td>
+        <td><center>
+        <a href="/media/{{i.pdf}}/" class='btn btn-primary btn-sm' target="_blank">DOWNLOAD PDF</a></center></td>
+
+
+    </tr>
+
+    {% endfor %}
+</tbody>
+
+
+
+
+</table></div>
+</div>
+</div>
+{% endblock %}
