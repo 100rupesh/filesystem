@@ -1,3 +1,5 @@
+#rupesh patil
+from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
 from django.core.files.storage import FileSystemStorage
@@ -40,3 +42,5 @@ def upload_book(request):
     else:
         form=BookForm()
     return render(request,'upload_book.html',{'form':form})
+
+
